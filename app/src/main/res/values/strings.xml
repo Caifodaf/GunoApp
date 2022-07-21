@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EmotionApp</string>
+    <string name="app_version">v0.1.0</string>
+    <string name="title_home">Home</string>
+    <string name="title_statistic">Statistic</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+    <string name="settings_abouts_as_description_1">«Routie.» - ваш календарь-планнер помогающий организовать ваше время.</string>
+    <string name="settings_abouts_as_description_2">\n«Routie.» - это наша попытка организовать ваше время наилучшим образом в понятном интерфейсе, помимо организации времени мы хотели создать возможности для вырабатываний привычек, потому что, правильные привычки это 100% дисциплины.\n\nМы надеемся вы сможите распланировать свое время самым удобным, продуктивным или приятным графиком.</string>
+</resources>

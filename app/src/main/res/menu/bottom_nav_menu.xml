@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_task_nav"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_statistics"
+        android:icon="@drawable/ic_stats_nav"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_emotion_btn"
+        android:icon="@drawable/ic_plus_nav"
+        android:iconTint="#7B61FF"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_user_nav"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_nav"
+        android:title="" />
+
+</menu>

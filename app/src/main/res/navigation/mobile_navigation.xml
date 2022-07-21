@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ru.android.emotionapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="ru.android.emotionapp.ui.statistic.StatisticFragment"
+        android:label="@string/title_statistic"
+        tools:layout="@layout/fragment_statistic" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="ru.android.emotionapp.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="ru.android.emotionapp.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_accountFragment"
+            app:destination="@id/navigation_settings_account" />
+        <action
+            android:id="@+id/action_navigation_settings_to_languageFragment"
+            app:destination="@id/navigation_settings_language" />
+        <action
+            android:id="@+id/action_navigation_settings_to_aboutAsFragment"
+            app:destination="@id/navigation_settings_aboutAs" />
+        <action
+            android:id="@+id/action_navigation_settings_to_notificationFragment"
+            app:destination="@id/navigation_settings_notification" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_settings_contacts"
+            app:destination="@id/navigation_settings_contacts" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_settings_appearance"
+            app:destination="@id/navigation_settings_appearance" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_settings_account"
+        android:name="ru.android.emotionapp.ui.settings.ui.account.AccountFragment"
+        android:label="account_fragment"
+        tools:layout="@layout/account_fragment" />
+    <fragment
+        android:id="@+id/navigation_settings_aboutAs"
+        android:name="ru.android.emotionapp.ui.settings.ui.aboutus.AboutAsFragment"
+        android:label="AboutAsFragment"
+        tools:layout="@layout/aboutas_fragment"/>
+    <fragment
+        android:id="@+id/navigation_settings_language"
+        android:name="ru.android.emotionapp.ui.settings.ui.language.LanguageFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/language_fragment"/>
+    <fragment
+        android:id="@+id/navigation_settings_notification"
+        android:name="ru.android.emotionapp.ui.settings.ui.notification.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/notification_fragment"/>
+    <fragment
+        android:id="@+id/navigation_settings_appearance"
+        android:name="ru.android.emotionapp.ui.settings.ui.appearance.AppearanceFragment"
+        android:label="AppearanceFragment"
+        tools:layout="@layout/appearance_fragment"/>
+    <fragment
+        android:id="@+id/navigation_settings_contacts"
+        android:name="ru.android.emotionapp.ui.settings.ui.contacts.ContactsFragment"
+        android:label="ContactsFragment"
+        tools:layout="@layout/contacts_fragment"/>
+
+</navigation>
