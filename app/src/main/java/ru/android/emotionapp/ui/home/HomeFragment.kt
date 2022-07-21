@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
-        Log.e("AAA","Frag create")
+        Log.e("AAA","Frag create test")
 
         val homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
