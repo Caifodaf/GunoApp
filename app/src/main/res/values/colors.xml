@@ -14,9 +14,12 @@
 
     <color name="black_01">#0E0E0E</color>
     <color name="black_02">#2D2D2D</color>
+    <color name="black_03">#12031C</color>
 
     <color name="purple_01">#AA9CFF</color>
     <color name="purple_02">#7B61FF</color>
+    <color name="purple_03">#9747FF</color>
+    <color name="purple_04">#AA9CFF</color>
 
 
 </resources>

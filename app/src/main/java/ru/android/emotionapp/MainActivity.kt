@@ -1,28 +1,18 @@
 package ru.android.emotionapp
 
-import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
-import androidx.annotation.NonNull
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
-import ru.android.emotionapp.BuildConfig.DEBUG
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import ru.android.emotionapp.databinding.ActivityMainBinding
 import ru.android.emotionapp.ui.emotion.EmotionSheetDialogFragment
-import ru.android.emotionapp.ui.home.HomeFragment
-import ru.android.emotionapp.ui.profile.ProfileFragment
-import ru.android.emotionapp.ui.settings.SettingsFragment
-import ru.android.emotionapp.ui.statistic.StatisticFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,6 +43,19 @@ class MainActivity : AppCompatActivity() {
             EmotionSheetDialogFragment().show(supportFragmentManager, "tag")
         }
 
+
+
+    }
+
+    override fun onStart() {
+        // Check for existing Google Sign In account, if the user is already signed in
+        // the GoogleSignInAccount will be non-null.
+
+        val account = GoogleSignIn.getLastSignedInAccount(this)
+        Log.e("AAA","Activity google - $account")
+        //updateUI(account)
+
+        super.onStart()
     }
 
 }

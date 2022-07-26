@@ -7,4 +7,8 @@
     <string name="title_settings">Settings</string>
     <string name="settings_abouts_as_description_1">«Routie.» - ваш календарь-планнер помогающий организовать ваше время.</string>
     <string name="settings_abouts_as_description_2">\n«Routie.» - это наша попытка организовать ваше время наилучшим образом в понятном интерфейсе, помимо организации времени мы хотели создать возможности для вырабатываний привычек, потому что, правильные привычки это 100% дисциплины.\n\nМы надеемся вы сможите распланировать свое время самым удобным, продуктивным или приятным графиком.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="minuts">минут</string>
+    <string name="more_hours">Более часа</string>
 </resources>

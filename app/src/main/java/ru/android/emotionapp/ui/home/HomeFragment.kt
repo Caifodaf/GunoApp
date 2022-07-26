@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import ru.android.emotionapp.databinding.FragmentHomeBinding
@@ -26,7 +25,7 @@ class HomeFragment : Fragment() {
         Log.e("AAA","Frag create test")
 
         val homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(this)[HomeViewModel::class.java]
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -35,11 +34,16 @@ class HomeFragment : Fragment() {
         //homeViewModel.text.observe(viewLifecycleOwner) {
         //    textView.text = it
         //}
+
+        homeViewModel.initRecyclerView(binding.rvNewHome)
+
+
         return root
     }
 
     override fun onDestroyView() {
         Log.e("AAA","Frag destroy")
+
         super.onDestroyView()
         _binding = null
     }

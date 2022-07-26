@@ -370,9 +370,24 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_login_debug"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll_block_btn_3"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/font_semi_bold"
+            android:gravity="center"
+            android:letterSpacing="-0.02"
+            android:padding="16dp"
+            android:text="Sing in Google+"
+            android:textColor="@color/grey_02"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_login_debug"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="75dp"
             android:fontFamily="@font/font_semi_bold"
