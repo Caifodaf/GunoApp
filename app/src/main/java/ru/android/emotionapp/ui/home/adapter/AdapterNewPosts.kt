@@ -1,81 +1,63 @@
 package ru.android.emotionapp.ui.home.adapter
 
-import android.annotation.SuppressLint
-import android.provider.Settings.Global.getString
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.Glide.with
 import ru.android.emotionapp.R
-import ru.android.emotionapp.models.PostsHomeModel
+import ru.android.emotionapp.databinding.PostItemSmallBinding
+import ru.android.emotionapp.data.model.PostsHomeModel
+import ru.android.emotionapp.uitilits.RecyclerViewClickListener
 
 
-class AdapterNewPosts: RecyclerView.Adapter<ViewHolderNewPosts>() {
-    private var dataSetRec = mutableListOf<PostsHomeModel>()
+class AdapterNewPosts(
+    private val itemViewModels: List<PostsHomeModel>,
+    private val listenerNewPost: RecyclerViewClickListener
+): RecyclerView.Adapter<AdapterNewPosts.ViewHolderNewPosts>() {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolderNewPosts {
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.post_item_small, viewGroup, false)
-        return ViewHolderNewPosts(view)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderNewPosts =
+        ViewHolderNewPosts(
+            DataBindingUtil.inflate(
+                LayoutInflater.from(parent.context),
+                R.layout.post_item_small,
+                parent,
+                false
+            )
+        )
 
     override fun onBindViewHolder(holder: ViewHolderNewPosts, position: Int) {
-        Log.d("ListT", "Load in bind holder - ${dataSetRec.size}")
-        holder.bind(dataSetRec[position])
-    }
-
-    override fun getItemCount(): Int { return dataSetRec.size }
-
-    fun setMain(list: MutableList<PostsHomeModel>) {
-        dataSetRec.clear()
-        dataSetRec.addAll(list)
-        notifyDataSetChanged()
-    }
-
-    fun setClear() {
-        dataSetRec.clear()
-        notifyDataSetChanged()
-    }
-
-}
-
-class ViewHolderNewPosts(private val view: View) : RecyclerView.ViewHolder(view) {
-    private lateinit var itemAvatarImage: ImageView
-    private lateinit var itemDateRead: TextView
-    private lateinit var itemFavorite: ImageView
-    private lateinit var itemGenre: TextView
-    private lateinit var itemTitle: TextView
-
-    @SuppressLint("CheckResult")
-    fun bind (dataSet : PostsHomeModel) {
-        Log.d("ListT", "Load in bind holder - $dataSet")
-
-        itemAvatarImage = view.findViewById(R.id.iv_avatar_user_post)
-        itemDateRead = view.findViewById(R.id.tv_time_created_post)
-        itemFavorite = view.findViewById(R.id.iv_favorite)
-        itemGenre = view.findViewById(R.id.tv_genres_post)
-        itemTitle = view.findViewById(R.id.tv_title_post)
-
-        itemDateRead.text = when(dataSet.timeRead){
-            in 1..59 -> "${dataSet.timeRead} ${(itemView.context.getString(R.string.minuts))}"
-            else -> itemView.context.getString(R.string.more_hours)
+        holder.recyclerviewNewPostBinding.newpost = itemViewModels[position]
+        holder.recyclerviewNewPostBinding.ivFavorite.setOnClickListener {
+            listenerNewPost.onRecyclerViewItemClick(holder.recyclerviewNewPostBinding.ivFavorite, itemViewModels[position])
         }
+        holder.recyclerviewNewPostBinding.cardBaseItem.setOnClickListener {
+            listenerNewPost.onRecyclerViewItemClick(holder.recyclerviewNewPostBinding.cardBaseItem, itemViewModels[position])
+        }
+        holder.bind()
+    }
 
-        // Todo Add favorite
-        //itemFavorite
+    override fun getItemCount(): Int = itemViewModels.size
 
-        itemGenre.text = dataSet.genre
-        itemTitle.text = dataSet.title
+    inner class ViewHolderNewPosts(
+        val recyclerviewNewPostBinding: PostItemSmallBinding
+    ) : RecyclerView.ViewHolder(recyclerviewNewPostBinding.root){
 
-        Glide.with(itemView.context)
-            .load(dataSet.imageSrcLink)
-            .circleCrop()
-            .placeholder(R.drawable.ic_user_round)
-            .into(itemAvatarImage)
+        fun bind(){
 
+            if(!recyclerviewNewPostBinding.newpost?.imageSrcLink.isNullOrEmpty()) {
+                Glide.with(itemView.context)
+                    .load(recyclerviewNewPostBinding.newpost!!.imageSrcLink)
+                    .circleCrop()
+                    .placeholder(R.drawable.ic_user_round)
+                    .into(recyclerviewNewPostBinding.ivAvatarUserPost)
+            }else{
+                recyclerviewNewPostBinding.ivAvatarUserPost.setImageDrawable(
+                    itemView.context.getDrawable(R.drawable.ic_user_round))
+            }
+        }
     }
 }
+
+

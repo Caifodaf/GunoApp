@@ -1,17 +1,17 @@
 package ru.android.emotionapp.api.DataDebug
 
-import ru.android.emotionapp.databinding.PostItemBinding
-import ru.android.emotionapp.models.PostsHomeModel
+import ru.android.emotionapp.data.model.PostsHomeModel
 
 class DataDebug {
 
     fun setNewHome(list: MutableList<PostsHomeModel>): MutableList<PostsHomeModel> {
-        val image = "https://sun9-29.userapi.com/impg/FdW4mJeREcRy86EbYgS--gh4yAFlQr6c7R6vOQ/Y0TnMsalbBo.jpg?size=1280x720&quality=96&sign=5b452d92355534b0368ae2b0feafcbb6&type=album"
+        val image = "https://sun1.userapi.com/sun1-28/s/v1/ig2/lQ2-FOi4O0hZ6Mpt1smwjQ_HWe-70Fs-Lzv0f-aNMoH5dz9-KO7dIfo5JrsnmUnzttk9_3WTdHNbKnmP8er1F_wI.jpg?size=1280x853&quality=96&type=album"
 
         list.add(
             PostsHomeModel(
+                id = 1,
                 imageSrcLink = image,
-                timeRead = 46,
+                timeRead = "46 минут",
                 favorite = false,
                 genre = "Творчество",
                 title = "Как выйти из кризиса идей если всё совсем плохо?",
@@ -21,8 +21,9 @@ class DataDebug {
 
         list.add(
             PostsHomeModel(
+                id = 2,
                 imageSrcLink = null,
-                timeRead = 7,
+                timeRead = "7 минут",
                 favorite = false,
                 genre = "Романтика",
                 title = "Как выйти из кризиса идей если всё совсем плохо?",
@@ -32,8 +33,9 @@ class DataDebug {
 
         list.add(
             PostsHomeModel(
+                id = 3,
                 imageSrcLink = null,
-                timeRead = 26,
+                timeRead = "Болле часа",
                 favorite = false,
                 genre = "Любовь",
                 title = "Как выйти из кризиса идей если всё совсем плохо?",

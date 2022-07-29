@@ -1,88 +1,100 @@
 package ru.android.emotionapp.ui.home
 
+import android.annotation.SuppressLint
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.Job
 import ru.android.emotionapp.api.DataDebug.DataDebug
-import ru.android.emotionapp.models.PostsHomeModel
-import ru.android.emotionapp.ui.home.adapter.AdapterNewPosts
-import ru.android.emotionapp.uitilits.SpaceItemDecoration
+import ru.android.emotionapp.data.model.PostsHomeModel
+import ru.android.emotionapp.uitilits.Coroutines
 
 class HomeViewModel : ViewModel() {
 
+    companion object {
+        const val FAVORITE_IS_SAVE = true
+        const val FAVORITE_NONE = false
+//        const val ALL_TYPE_LIST = "ALL"
+//        const val READ_TYPE_LIST = "READ"
+//        const val RECOMMENDED_TYPE_LIST = "RECOMMENDED"
+        const val ALL_TYPE_LIST = 0
+        const val READ_TYPE_LIST = 1
+        const val RECOMMENDED_TYPE_LIST = 2
+    }
+
     private val dataDebug = DataDebug()
     private val list = mutableListOf<PostsHomeModel>()
-
-    private var listNewCreated = false
-    private var listStringCreated = false
-    private var listVPCreated = false
+    private lateinit var job: Job
 
     init {
-        Log.e("AAA","VM create")
+        Log.e("AAA","VM HomeViewModel create")
     }
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+//    val onCreateRecyclerView: MutableLiveData<Boolean> by lazy {
+//        MutableLiveData<Boolean>()
+//    }
 
-    fun initRecyclerView(rvNew: RecyclerView,rvString: RecyclerView,rvViewPager2: RecyclerView){
-        initRecyclerViewNewList(rvNew)
-        initRecyclerViewStringPages(rvString)
-        initRecyclerViewViewPager2(rvViewPager2)
-    }
+    private val _newPost = MutableLiveData<List<PostsHomeModel>>()
+    val newpost: LiveData<List<PostsHomeModel>>
+        get() = _newPost
 
-    fun initRecyclerViewNewList(recyclerView: RecyclerView){
-        val adapterNewPosts = AdapterNewPosts()
+    private val _allPost = MutableLiveData<List<PostsHomeModel>>()
+    val allPost: LiveData<List<PostsHomeModel>>
+        get() = _allPost
 
-        recyclerView.addItemDecoration(SpaceItemDecoration())
-        recyclerView.adapter = adapterNewPosts
-
-        if (listNewCreated)
-            adapterNewPosts.setMain(dataDebug.setNewHome(list))
-
-        listNewCreated = true
+    fun getNewPost() {
+        job = Coroutines.ioThenMain(
+            { dataDebug.setNewHome(list) },
+            { _newPost.value = list}
+        )
     }
 
-    fun clearRecyclerViewNewList(adapter: AdapterNewPosts,){
-        adapter.setClear()
+    fun getAllPost(typeList: Int) {
+         list.clear()
+        when(typeList){
+            ALL_TYPE_LIST->{
+                job = Coroutines.ioThenMain(
+                    { dataDebug.setNewHome(list) },
+                    { if(_allPost.value.isNullOrEmpty())
+                            _allPost.value = list }
+                )}
+            READ_TYPE_LIST->{
+                job = Coroutines.ioThenMain(
+                    { dataDebug.setNewHome(list) },
+                    { _allPost.value = listOf(list[0]) }
+                )}
+            RECOMMENDED_TYPE_LIST->{
+                job = Coroutines.ioThenMain(
+                    { dataDebug.setNewHome(list) },
+                    { _allPost.value = list.reversed() }
+                )}
+            else->{
+                job = Coroutines.ioThenMain(
+                    { dataDebug.setNewHome(list) },
+                    { _allPost.value = list }
+                )
+            }
+        }
+
     }
-
-    fun initRecyclerViewStringPages(recyclerView: RecyclerView){
-        val adapterNewPosts = AdapterNewPosts()
-
-        recyclerView.addItemDecoration(SpaceItemDecoration())
-        recyclerView.adapter = adapterNewPosts
-
-        if (listStringCreated)
-            adapterNewPosts.setMain(dataDebug.setNewHome(list))
-
-        listStringCreated = true
-    }
-
-    fun initRecyclerViewViewPager2(recyclerView: RecyclerView){
-        val adapterNewPosts = AdapterNewPosts()
-
-        recyclerView.addItemDecoration(SpaceItemDecoration())
-        recyclerView.adapter = adapterNewPosts
-
-        if (listVPCreated)
-            adapterNewPosts.setMain(dataDebug.setNewHome(list))
-
-        listVPCreated = true
-    }
-
-    fun clearRecyclerViewViewPager2(adapter: AdapterNewPosts,){
-        adapter.setClear()
-    }
-
-
 
     override fun onCleared() {
         Log.e("AAA","VM clear")
+        if(::job.isInitialized) job.cancel()
         super.onCleared()
+    }
+
+    @SuppressLint("ResourceAsColor")
+    fun saveFavoritePost(view: View, list: PostsHomeModel) {
+// TODO add function
+        when(list.favorite){
+            FAVORITE_NONE->{
+            }
+            FAVORITE_IS_SAVE->{
+
+            }
+        }
     }
 }

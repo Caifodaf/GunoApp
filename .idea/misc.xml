@@ -11,9 +11,11 @@
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_paint_circle.xml" value="0.3745" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_plus_nav.xml" value="0.332" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_share_circle.xml" value="0.3745" />
+        <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_star_small.xml" value="0.3745" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_star_sub_big.xml" value="0.332" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_task_nav.xml" value="0.332" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_twitter.xml" value="0.3745" />
+        <entry key="..\:/EmotionApp/app/src/main/res/drawable/ic_user_round.xml" value="0.3745" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/rectangle_rounded_all_12.xml" value="0.3745" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/rectangle_rounded_all_16.xml" value="0.332" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/rectangle_rounded_all_20.xml" value="0.332" />
@@ -24,18 +26,24 @@
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/rectangle_rounded_all_28.xml" value="0.3745" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/selector_bnv.xml" value="0.332" />
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/shadow.xml" value="0.332" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.580078125" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout-w936dp/activity_login.xml" value="0.415625" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/aboutas_fragment.xml" value="0.9" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/account_fragment.xml" value="0.2722222222222222" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout/activity_login.xml" value="0.31354166666666666" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.5" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/appearance_fragment.xml" value="0.5541666666666667" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/bottom_navigation_view.xml" value="0.3890625" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/bottom_sheet_emotion.xml" value="0.4505208333333333" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/contacts_fragment.xml" value="0.5191104933981932" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout/content_splash_screen.xml" value="0.5541666666666667" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_all_viewpager.xml" value="0.4161458333333333" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.5541666666666667" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_emotion_sheet_dialog_list_dialog.xml" value="0.4505208333333333" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_emotion_sheet_dialog_list_dialog_item.xml" value="0.4505208333333333" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_home2.xml" value="0.39479166666666665" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_notifications.xml" value="0.5541666666666667" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_profile.xml" value="0.5541666666666667" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_read_viewpager.xml" value="0.4161458333333333" />

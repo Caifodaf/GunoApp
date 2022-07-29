@@ -1,8 +1,9 @@
-package ru.android.emotionapp.models
+package ru.android.emotionapp.data.model
 
 data class PostsHomeModel(
+    val id:Int? = 0,
     val imageSrcLink:String? = "",
-    val timeRead:Int? = 0,
+    val timeRead:String? = "1",
     val favorite:Boolean = false,
     val genre:String = "",
     val title:String = "",

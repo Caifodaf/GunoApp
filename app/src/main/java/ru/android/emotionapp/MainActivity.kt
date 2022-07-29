@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.e("AAA","Activity create")
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -31,10 +31,6 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-
-        //val appBarConfiguration = AppBarConfiguration(setOf(
-        //        R.id.navigation_home, R.id.navigation_statistics, R.id.navigation_emotion_btn ,R.id.navigation_profile,R.id.navigation_settings))
-        //setupActionBarWithNavController(navController, appBarConfiguration)
 
         navView.setupWithNavController(navController)
 
@@ -51,8 +47,8 @@ class MainActivity : AppCompatActivity() {
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
 
-        val account = GoogleSignIn.getLastSignedInAccount(this)
-        Log.e("AAA","Activity google - $account")
+        //val account = GoogleSignIn.getLastSignedInAccount(this)
+        //Log.e("AAA","Activity google - $account")
         //updateUI(account)
 
         super.onStart()

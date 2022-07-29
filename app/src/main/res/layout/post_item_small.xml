@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<!--    <data>-->
+<!--        <variable-->
+<!--            name="itemViewModel"-->
+<!--            type="ru.android.emotionapp.ui.home.viewmodel.recyclerview.exp.PostViewModel" />-->
+<!--    </data>-->
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="newpost"
+            type="ru.android.emotionapp.data.model.PostsHomeModel" />
+    </data>
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_base_item"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
@@ -24,7 +36,9 @@
                 android:layout_height="46dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:src="@drawable/doge" />
+                android:src="@{newpost.imageSrcLink}" />
+
+<!--            app:image="@{newPost.imageSrcLink}"-->
 
             <View
                 android:layout_width="wrap_content"
@@ -50,9 +64,10 @@
                 android:fontFamily="@font/font_medium"
                 android:letterSpacing="-0.02"
                 android:padding="15dp"
-                android:text="7 мин"
+                android:text="@{newpost.timeRead}"
                 android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:text="7 min" />
 
             <ImageView
                 android:id="@+id/iv_favorite"
@@ -64,6 +79,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_star_small" />
+<!--                app:tint="@{newPost.favorite == 1 ? @color/yellow_01 : @color/white}" -->
+
 
             <TextView
                 android:id="@+id/tv_genres_post"
@@ -74,10 +91,11 @@
                 android:layout_marginTop="140dp"
                 android:fontFamily="@font/font_medium"
                 android:letterSpacing="-0.02"
-                android:text="Творчество"
+                android:text="@{newpost.genre}"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:text="Romance" />
 
             <TextView
                 android:id="@+id/tv_title_post"
@@ -91,9 +109,10 @@
                 android:fontFamily="@font/font_bold"
                 android:letterSpacing="-0.02"
                 android:maxLines="3"
-                android:text="Как выйти из кризиса идей если всё совсем плохо?"
+                android:text="@{newpost.title}"
                 android:textColor="@color/white"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                tools:text="Hello" />
 
 
         </RelativeLayout>
@@ -101,4 +120,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</FrameLayout>
+</layout>
