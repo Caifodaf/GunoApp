@@ -11,8 +11,6 @@
         android:id="@+id/rl_main_block"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="50dp"
         >
 
@@ -20,6 +18,8 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
             android:text="Статистика"
@@ -27,19 +27,134 @@
             android:textSize="32sp" />
 
         <TextView
-            android:id="@+id/tv_title_2"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_title_moods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/font_bold"
+            android:letterSpacing="-0.02"
+            android:text="Настроения"
+            android:textColor="@color/purple_05"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_title_energy"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_title"
             android:layout_marginTop="-5dp"
-            android:text="настроения"
-            android:textColor="@color/grey_04"
-            android:textSize="32sp"
+            android:layout_toEndOf="@id/tv_title_moods"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
-            />
+            android:text="Энергии"
+            android:textColor="@color/grey_04"
+            android:textSize="28sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/rl_title_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_moods"
+            android:layout_marginTop="18dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_date_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rectangle_rounded_all_20"
+                android:backgroundTint="@color/grey_06"
+                android:padding="11dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:fontFamily="@font/font_semi_bold"
+                android:letterSpacing="-0.02"
+                android:text="Неделя"
+                android:textColor="@color/black_02"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_date_two_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_rounded_all_20"
+                android:padding="11dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:fontFamily="@font/font_semi_bold"
+                android:letterSpacing="-0.02"
+                android:text="2 недели"
+                android:textColor="@color/black_02"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_date_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_rounded_all_20"
+                android:padding="11dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:fontFamily="@font/font_semi_bold"
+                android:letterSpacing="-0.02"
+                android:text="Месяц"
+                android:textColor="@color/black_02"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_date_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_rounded_all_20"
+                android:padding="11dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/font_semi_bold"
+                android:letterSpacing="-0.02"
+                android:text="Все время"
+                android:textColor="@color/black_02"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        </HorizontalScrollView>
 
 
+        <ImageView
+            android:id="@+id/iv_graph_current"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/rl_title_list"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ban" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_date_current"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/rl_title_list"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:fontFamily="@font/font_medium"-->
+<!--            android:letterSpacing="-0.02"-->
+<!--            android:text="18 июня —> 26 июля"-->
+<!--            android:textColor="@color/grey_07"-->
+<!--            android:textSize="13sp"/>-->
+
+
+<!--        <com.github.mikephil.charting.charts.LineChart-->
+<!--            android:id="@+id/chart1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_below="@id/tv_date_current"-->
+<!--            android:layout_marginTop="20dp" />-->
 
 
 

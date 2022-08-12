@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -17,16 +18,18 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import dagger.hilt.android.AndroidEntryPoint
 import ru.android.emotionapp.R
 import ru.android.emotionapp.api.goolgeauth.GoogleAuthorisation
 import ru.android.emotionapp.databinding.FragmentSettingsBinding
+import ru.android.emotionapp.ui.home.HomeViewModel
 
-
+@AndroidEntryPoint
 class SettingsFragment : Fragment() {
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
-    private lateinit var settingsViewModel: SettingsViewModel
+    private val viewModel by viewModels<SettingsViewModel>()
 
     private lateinit var accountBtn: RelativeLayout
 
@@ -35,18 +38,13 @@ class SettingsFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
-        settingsViewModel =
-                ViewModelProvider(this).get(SettingsViewModel::class.java)
+        //settingsViewModel =
+        //        ViewModelProvider(this).get(SettingsViewModel::class.java)
 
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val google = GoogleAuthorisation()
-
-//        val textView: TextView = binding.textSettings
-//        settingsViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
 
 
 
@@ -64,29 +62,22 @@ class SettingsFragment : Fragment() {
 
 
     private fun unitBtnSettings(){
-        val accountBtn = binding.llAccountBtn
-        val notificationBtn = binding.llNotificationBtn
-        val langBtn = binding.llLanguageBtn
-        val aboutUsBtn = binding.llAboutAsBtn
-        val appearanceBtn = binding.llAppearanceBtn
-        val contactsBtn = binding.llContactsBtn
-
-        accountBtn.setOnClickListener(){
+        binding.llAccountBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_account)
         }
-        notificationBtn.setOnClickListener(){
+        binding.llNotificationBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_notification)
         }
-        langBtn.setOnClickListener(){
+        binding.llLanguageBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_language)
         }
-        aboutUsBtn.setOnClickListener(){
+        binding.llAboutAsBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_aboutAs)
         }
-        appearanceBtn.setOnClickListener(){
+        binding.llAppearanceBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_appearance)
         }
-        contactsBtn.setOnClickListener(){
+        binding.llContactsBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_contacts)
         }
     }

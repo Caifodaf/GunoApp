@@ -45,33 +45,35 @@
                 android:id="@+id/rl_block_change_emotion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:paddingBottom="33dp"
                 android:layout_below="@+id/tv_title_sheet"
-                android:orientation="vertical"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/rectangle_rounded_all_20"
-                android:backgroundTint="@color/grey_03">
+                android:backgroundTint="@color/grey_03"
+                android:orientation="vertical"
+                android:paddingBottom="33dp">
 
                 <TextView
                     android:id="@+id/tv_title_seekbar_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="150dp"
-                    android:text="НАСТРОЕНИЕ"
+                    android:layout_marginEnd="16dp"
                     android:fontFamily="@font/font_semi_bold"
-                    android:textSize="14sp"
-                    android:textColor="@color/grey_02"/>
+                    android:text="НАСТРОЕНИЕ"
+                    android:textColor="@color/grey_02"
+                    android:textSize="14sp" />
 
                 <SeekBar
                     android:id="@+id/seekbar_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
                     android:layout_marginTop="8dp"
-                    android:progress="50"
+                    android:layout_marginEnd="12dp"
+                    android:max="6"
+                    android:progress="3"
+                    android:progressDrawable="@drawable/seekbar_emotion"
                     />
 
                 <TextView
@@ -79,22 +81,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="28dp"
-                    android:text="ЭНЕРГИЯ"
+                    android:layout_marginEnd="16dp"
                     android:fontFamily="@font/font_semi_bold"
+                    android:text="ЭНЕРГИЯ"
+                    android:textColor="@color/grey_02"
                     android:textSize="14sp"
-                    android:textColor="@color/grey_02"/>
+                    />
 
                 <SeekBar
                     android:id="@+id/seekbar_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
                     android:layout_marginTop="8dp"
-                    android:progress="50"
-                    />
+                    android:layout_marginEnd="12dp"
+                    android:max="6"
+                    android:progress="3"
+                    android:progressDrawable="@drawable/seekbar_emotion"/>
 
             </LinearLayout>
 
@@ -103,29 +107,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rl_block_change_emotion"
-                android:layout_marginTop="66dp"
+                android:layout_marginTop="46dp"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/rectangle_rounded_all_16"
                 android:backgroundTint="@color/black_01"
                 android:fontFamily="@font/font_semi_bold"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Далее"
+                android:text="Готово"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_btn_back_stage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_btn_next_stage"
-                android:gravity="center"
-                android:textColor="@color/grey_02"
-                android:textSize="16sp"
-                android:fontFamily="@font/font_semi_bold"
-                android:padding="16dp"
-                android:layout_marginTop="8dp"
-                android:text="Закрыть"
-                />
 
 
         </RelativeLayout>

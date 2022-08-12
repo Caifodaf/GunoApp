@@ -42,6 +42,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_gmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -76,15 +77,16 @@
             android:background="@drawable/rectangle_rounded_all_12"
             android:backgroundTint="@color/grey_06"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_twitter"
-                />
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_twitter" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,8 +95,7 @@
                 android:letterSpacing="-0.02"
                 android:text="Twitter"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
         </LinearLayout>
 

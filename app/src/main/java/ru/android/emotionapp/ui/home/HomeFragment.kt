@@ -8,11 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import dagger.hilt.android.AndroidEntryPoint
 import ru.android.emotionapp.R
 import ru.android.emotionapp.databinding.FragmentHomeBinding
 import ru.android.emotionapp.data.model.PostsHomeModel
@@ -22,11 +22,12 @@ import ru.android.emotionapp.ui.home.viewpagercontent.ViewPager2ViewHeightAnimat
 import ru.android.emotionapp.uitilits.RecyclerViewClickListener
 import ru.android.emotionapp.uitilits.SpaceItemDecoration
 
+@AndroidEntryPoint
 class HomeFragment : Fragment(), RecyclerViewClickListener {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var homeViewModel: HomeViewModel
+    private val viewModel by viewModels<HomeViewModel>()
 
     private lateinit var viewPagerCollectionAdapter: ViewPagerCollectionAdapter
     private lateinit var viewPager: ViewPager2
@@ -36,23 +37,29 @@ class HomeFragment : Fragment(), RecyclerViewClickListener {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
-        homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
+        //homeViewModel =
+        //    ViewModelProvider(this)[HomeViewModel::class.java]
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        //getApi()
         initNewRecyclerView()
         initViewPager2()
 
         return root
     }
 
-    private fun initNewRecyclerView(){
-        if(homeViewModel.newpost.value.isNullOrEmpty())
-            homeViewModel.getNewPost()
+    private fun getApi(){
+        viewModel.getPost("New").observe(viewLifecycleOwner) { post ->
+        }
+    }
 
-        homeViewModel.newpost.observe(viewLifecycleOwner, Observer { newpost ->
+    private fun initNewRecyclerView(){
+        if(viewModel.newpost.value.isNullOrEmpty())
+            viewModel.getNewPost()
+
+        viewModel.newpost.observe(viewLifecycleOwner, Observer { newpost ->
             binding.rvNewHome.also {
                 it.addItemDecoration(SpaceItemDecoration())
                 it.adapter = AdapterNewPosts(newpost,this)
@@ -116,7 +123,7 @@ class HomeFragment : Fragment(), RecyclerViewClickListener {
             R.id.iv_favorite -> {
                 Toast.makeText(context, "Авторизируйтесь для сохранения", Toast.LENGTH_SHORT).show()
                 Log.e("AAA","Frag iv_favorite + ${list}")
-                homeViewModel.saveFavoritePost(view,list as PostsHomeModel)
+                viewModel.saveFavoritePost(view,list as PostsHomeModel)
             }
             R.id.card_base_item -> {
                 Log.e("AAA","Frag card_base_item")

@@ -1,7 +1,10 @@
 package ru.android.emotionapp.ui.settings.ui.language
 
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class LanguageViewModel : ViewModel() {
+@HiltViewModel
+class LanguageViewModel @Inject constructor() : ViewModel() {
     // TODO: Implement the ViewModel
 }

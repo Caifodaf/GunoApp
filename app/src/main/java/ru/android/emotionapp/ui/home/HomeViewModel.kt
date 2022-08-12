@@ -6,12 +6,18 @@ import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.liveData
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
+import ru.android.emotionapp.api.ApiRepository
 import ru.android.emotionapp.api.DataDebug.DataDebug
 import ru.android.emotionapp.data.model.PostsHomeModel
+import ru.android.emotionapp.data.model.ResponseModelGetPost
 import ru.android.emotionapp.uitilits.Coroutines
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(val repository: ApiRepository) : ViewModel() {
 
     companion object {
         const val FAVORITE_IS_SAVE = true
@@ -44,12 +50,22 @@ class HomeViewModel : ViewModel() {
     val allPost: LiveData<List<PostsHomeModel>>
         get() = _allPost
 
+    fun getPost(type: String) : LiveData<ResponseModelGetPost> {
+        return liveData {
+            val data = repository.getPost(type)
+            data.body()?.let {
+                emit(it)
+            }
+        }
+    }
+
     fun getNewPost() {
         job = Coroutines.ioThenMain(
             { dataDebug.setNewHome(list) },
             { _newPost.value = list}
         )
     }
+
 
     fun getAllPost(typeList: Int) {
          list.clear()
