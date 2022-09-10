@@ -27,7 +27,7 @@
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/font_bold"
                 android:letterSpacing="-0.02"
-                android:text="Добавить \nнастроение"
+                android:text="@string/add_emotion_sheet"
                 android:textColor="@color/black"
                 android:textSize="32sp" />
 
@@ -60,7 +60,7 @@
                     android:layout_marginTop="150dp"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/font_semi_bold"
-                    android:text="НАСТРОЕНИЕ"
+                    android:text="@string/mood_sheet"
                     android:textColor="@color/grey_02"
                     android:textSize="14sp" />
 
@@ -84,7 +84,7 @@
                     android:layout_marginTop="28dp"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/font_semi_bold"
-                    android:text="ЭНЕРГИЯ"
+                    android:text="@string/energy_sheet"
                     android:textColor="@color/grey_02"
                     android:textSize="14sp"
                     />
@@ -114,7 +114,7 @@
                 android:fontFamily="@font/font_semi_bold"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Готово"
+                android:text="@string/complete_sheet"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 

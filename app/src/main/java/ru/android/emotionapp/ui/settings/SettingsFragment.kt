@@ -62,6 +62,11 @@ class SettingsFragment : Fragment() {
 
 
     private fun unitBtnSettings(){
+        // Todo delete later
+        binding.ivSubImage.setOnClickListener(){
+            viewModel.printName()
+        }
+
         binding.llAccountBtn.setOnClickListener(){
             findNavController().navigate(R.id.navigation_settings_account)
         }

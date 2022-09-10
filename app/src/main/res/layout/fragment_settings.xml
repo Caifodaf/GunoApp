@@ -83,7 +83,7 @@
                 android:layout_marginTop="76dp"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="Подписка"
+                android:text="@string/subscription_settings"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:fontFamily="@font/font_semi_bold"
@@ -99,7 +99,7 @@
                 android:fontFamily="@font/font_medium"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="бесплатный тариф"
+                android:text="@string/free_pass_settings"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
@@ -135,7 +135,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Аккаунт"
+                    android:text="@string/account_settings"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -144,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Полное редактирование"
+                    android:text="@string/account_description_settings"
                     android:textColor="@color/grey_05"
                     android:textSize="10sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -174,7 +174,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Уведомления"
+                    android:text="@string/notification_settings"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -183,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Выберите удобное время"
+                    android:text="@string/notification_description_settings"
                     android:textColor="@color/grey_05"
                     android:textSize="10sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -223,7 +223,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Язык"
+                    android:text="@string/lang_settings"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -232,7 +232,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Для лучшего восприятия"
+                    android:text="@string/lang_description_settings"
                     android:textColor="@color/grey_05"
                     android:textSize="10sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -262,7 +262,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="О приложении"
+                    android:text="@string/about_app_settings"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -271,7 +271,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Актуальное о нас"
+                    android:text="@string/about_app_description_settings"
                     android:textColor="@color/grey_05"
                     android:textSize="10sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -311,7 +311,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Внешний вид"
+                    android:text="@string/appearance_settings"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -320,7 +320,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Для лучшего восприятия"
+                    android:text="@string/appearance_description_settings"
                     android:textColor="@color/grey_05"
                     android:textSize="10sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -350,7 +350,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Наши контакты"
+                    android:text="@string/uor_contacts_settings"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -359,7 +359,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Актуальное о нас"
+                    android:text="@string/our_contacts_description_settings"
                     android:textColor="@color/grey_05"
                     android:textSize="10sp"
                     android:fontFamily="@font/font_semi_bold"
@@ -379,7 +379,7 @@
             android:gravity="center"
             android:letterSpacing="-0.02"
             android:padding="16dp"
-            android:text="Sing in Google+"
+            android:text="@string/sing_in_google_debug"
             android:textColor="@color/grey_02"
             android:textSize="14sp" />
 
@@ -394,7 +394,7 @@
             android:gravity="center"
             android:letterSpacing="-0.02"
             android:padding="16dp"
-            android:text="Выйти из аккаунта"
+            android:text="@string/logout_settings"
             android:textColor="@color/grey_02"
             android:textSize="14sp" />
 

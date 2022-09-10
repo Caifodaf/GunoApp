@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_bold"
                 android:letterSpacing="-0.02"
-                android:text="О приложении"
+                android:text="@string/about_app"
                 android:textColor="@color/black"
                 android:textSize="32sp" />
 
@@ -94,7 +94,7 @@
                     android:fontFamily="@font/font_semi_bold"
                     android:gravity="center"
                     android:letterSpacing="-0.02"
-                    android:text="Версия"
+                    android:text="@string/version_about"
                     android:textColor="@color/grey_05"
                     android:textSize="16sp" />
 

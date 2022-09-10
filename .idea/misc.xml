@@ -30,7 +30,7 @@
         <entry key="..\:/EmotionApp/app/src/main/res/drawable/shadow.xml" value="0.332" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.580078125" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout-w936dp/activity_login.xml" value="0.415625" />
-        <entry key="..\:/EmotionApp/app/src/main/res/layout/aboutas_fragment.xml" value="0.9" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout/aboutas_fragment.xml" value="0.7055702917771883" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/account_fragment.xml" value="0.2722222222222222" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/activity_login.xml" value="0.31354166666666666" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -47,7 +47,7 @@
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_home.xml" value="0.67" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_home2.xml" value="0.39479166666666665" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_notifications.xml" value="0.5541666666666667" />
-        <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_profile.xml" value="0.5541666666666667" />
+        <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_read_viewpager.xml" value="0.4161458333333333" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_recomended_view_pager.xml" value="0.40208333333333335" />
         <entry key="..\:/EmotionApp/app/src/main/res/layout/fragment_settings.xml" value="0.33" />

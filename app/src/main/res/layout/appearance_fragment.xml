@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/font_bold"
                 android:letterSpacing="-0.02"
-                android:text="Внешний вид"
+                android:text="@string/appearance"
                 android:textColor="@color/black"
                 android:textSize="32sp" />
 
@@ -38,7 +38,7 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Тема приложения"
+                android:text="@string/theme_app_appearance"
                 android:textColor="@color/grey_02"
                 android:textSize="14sp" />
 
@@ -74,7 +74,7 @@
                         android:layout_alignParentBottom="true"
                         android:fontFamily="@font/font_semi_bold"
                         android:letterSpacing="-0.02"
-                        android:text="Светлая"
+                        android:text="@string/light_theme_appearance"
                         android:textColor="@color/white"
                         android:textSize="14sp"
                         />
@@ -107,7 +107,7 @@
                         android:layout_marginBottom="12dp"
                         android:fontFamily="@font/font_semi_bold"
                         android:letterSpacing="-0.02"
-                        android:text="Тёмная"
+                        android:text="@string/dark_theme_appearance"
                         android:textColor="@color/black_02"
                         android:textSize="14sp" />
                 </RelativeLayout>
@@ -138,7 +138,7 @@
                         android:layout_marginBottom="12dp"
                         android:fontFamily="@font/font_semi_bold"
                         android:letterSpacing="-0.02"
-                        android:text="Системная"
+                        android:text="@string/default_theme_appearance"
                         android:textColor="@color/black_02"
                         android:textSize="14sp" />
                 </RelativeLayout>

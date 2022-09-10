@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
-            android:text="Наши контакты"
+            android:text="@string/our_contacts"
             android:textColor="@color/black"
             android:textSize="32sp" />
 
@@ -49,7 +49,7 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/font_medium"
                 android:letterSpacing="-0.02"
-                android:text="cmd.type@gmail.com"
+                android:text="@string/email_our_contacts"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
@@ -62,7 +62,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Написать"
+                android:text="@string/send_our_contacts"
                 android:textColor="@color/purple_02"
                 android:textSize="14sp" />
 
@@ -93,7 +93,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Twitter"
+                android:text="@string/twitter"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -124,7 +124,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Instagram"
+                android:text="@string/instagram"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -155,7 +155,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Behance"
+                android:text="@string/behance"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 

@@ -49,7 +49,7 @@
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/font_medium"
                     android:letterSpacing="-0.02"
-                    android:text="slx.mode@gmail.com"
+                    android:text="@string/email_debug_account"
                     android:textColor="@color/black"
                     android:textSize="30sp" />
 
@@ -62,7 +62,7 @@
                     android:layout_marginBottom="16dp"
                     android:fontFamily="@font/font_semi_bold"
                     android:letterSpacing="-0.02"
-                    android:text="Изменить"
+                    android:text="@string/change_account"
                     android:textColor="@color/purple_02"
                     android:textSize="14sp" />
 
@@ -79,7 +79,7 @@
                 android:gravity="center"
                 android:letterSpacing="-0.02"
                 android:padding="16dp"
-                android:text="Выйти из аккаунта"
+                android:text="@string/logout_account"
                 android:textColor="@color/grey_02"
                 android:textSize="14sp" />
 

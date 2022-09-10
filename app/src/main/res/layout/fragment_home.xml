@@ -38,7 +38,7 @@
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
-            android:text="Новое"
+            android:text="@string/new_home"
             android:textColor="@color/black_03"
             android:textSize="20sp" />
 
@@ -70,7 +70,7 @@
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/font_bold"
                     android:letterSpacing="-0.02"
-                    android:text="Всё"
+                    android:text="@string/all_list_home"
                     android:textColor="@color/black_03"
                     android:textSize="18sp"/>
 
@@ -81,7 +81,7 @@
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/font_bold"
                     android:letterSpacing="-0.02"
-                    android:text="Уже прочитанно"
+                    android:text="@string/read_list_home"
                     android:textColor="@color/grey_04"
                     android:textSize="18sp"/>
 
@@ -93,7 +93,7 @@
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/font_bold"
                     android:letterSpacing="-0.02"
-                    android:text="Рекомендованно"
+                    android:text="@string/recommended_list_home"
                     android:textColor="@color/grey_04"
                     android:textSize="18sp"/>
             </LinearLayout>

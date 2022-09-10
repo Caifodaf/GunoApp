@@ -53,33 +53,55 @@
                     android:layout_marginBottom="-34dp"
                     android:layout_alignBottom="@id/iv_back_user"
                     android:layout_centerHorizontal="true"
-                    app:cardBackgroundColor="@android:color/white">
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="360dp">
 
                     <ImageView
                         android:id="@+id/iv_avatar_user"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/doge"/>
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ic_user_round"/>
                 </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tv_name_user"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
-                android:layout_below="@id/iv_back_user"
-                android:gravity="center"
-                android:layout_centerHorizontal="true"
-                android:maxLines="1"
-                android:text="Анастасия Мелихина"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:fontFamily="@font/font_bold"
-                android:letterSpacing="-0.02"/>
+                <TextView
+                    android:id="@+id/tv_name_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_back_user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:fontFamily="@font/font_bold"
+                    android:gravity="center"
+                    android:letterSpacing="-0.02"
+                    android:maxLines="1"
+                    android:text="@string/anonim_user_name_profile"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@id/rl_user_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="128dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/font_bold"
+            android:gravity="center"
+            android:letterSpacing="-0.02"
+            android:maxLines="1"
+            android:text="@string/login_debug"
+            android:textColor="@color/black_01"
+            android:textSize="20sp"
+            android:background="@drawable/rectangle_rounded_all_20"
+            android:backgroundTint="@color/grey_03"
+            android:padding="16dp"/>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

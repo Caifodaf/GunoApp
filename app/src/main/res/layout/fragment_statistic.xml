@@ -22,7 +22,7 @@
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
-            android:text="Статистика"
+            android:text="@string/statistic"
             android:textColor="@color/black"
             android:textSize="32sp" />
 
@@ -36,7 +36,7 @@
             android:layout_marginTop="-5dp"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
-            android:text="Настроения"
+            android:text="@string/mood_statistic"
             android:textColor="@color/purple_05"
             android:textSize="28sp" />
 
@@ -49,7 +49,7 @@
             android:layout_toEndOf="@id/tv_title_moods"
             android:fontFamily="@font/font_bold"
             android:letterSpacing="-0.02"
-            android:text="Энергии"
+            android:text="@string/energy_statistic"
             android:textColor="@color/grey_04"
             android:textSize="28sp" />
 
@@ -77,7 +77,7 @@
                 android:paddingEnd="16dp"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Неделя"
+                android:text="@string/week_statistic"
                 android:textColor="@color/black_02"
                 android:textSize="13sp"/>
 
@@ -91,7 +91,7 @@
                 android:paddingEnd="16dp"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="2 недели"
+                android:text="@string/two_week_statistic"
                 android:textColor="@color/black_02"
                 android:textSize="13sp"/>
 
@@ -105,7 +105,7 @@
                 android:paddingEnd="16dp"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Месяц"
+                android:text="@string/mouth_statistic"
                 android:textColor="@color/black_02"
                 android:textSize="13sp"/>
 
@@ -120,7 +120,7 @@
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/font_semi_bold"
                 android:letterSpacing="-0.02"
-                android:text="Все время"
+                android:text="@string/all_time_statistic"
                 android:textColor="@color/black_02"
                 android:textSize="13sp"/>
         </LinearLayout>

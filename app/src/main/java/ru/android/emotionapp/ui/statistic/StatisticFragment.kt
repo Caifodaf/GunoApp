@@ -43,6 +43,24 @@ class StatisticFragment : Fragment(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        val lineChartGraphView = binding.chart1
 //
 //        var valsComp1: List<Entry> = emptyList()
